@@ -6,7 +6,7 @@ function speak(text){
     let text_speak=new SpeechSynthesisUtterance(text)
     text_speak.rate=1
     text_speak.pitch=1
-    text_speak.volume=1
+    text_speak.volume=2
     text_speak.lang="hi-GB"
     window.speechSynthesis.speak(text_speak)
 }
@@ -93,4 +93,5 @@ function takeCommand(message){
         speak(finalText)
         window.open(`https://www.google.com/search?q=${message.replace("kaali","")}`,"_blank")
     }
+
 }
